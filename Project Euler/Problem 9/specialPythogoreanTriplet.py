@@ -1,18 +1,11 @@
-a = 3
-b = 4
-c = 5
-
-while c < 333 :
-    a = 3
-    b = 4
-    while b < 332 :
-        a = 3
-        while a < 331 :
-            if (a**2) + (b**2) == (c**2) :
-                if a + b + c == 1000 :
-                    print(a*b*c)
-                    break
-            a += 1
-            print(a)
-        b += 1
-    c += 1
+for a in range(1, 500):
+    b = (1000000 - 2000*a)/(2000 - 2*a)
+    b_string = str(b)
+    b_length = len(b_string)
+    if b_length == 5:
+        check_b = b_string[4]
+        if check_b == "0":
+            c = 1000 - b - a
+            print("Success! The answer is:")
+            print(a*b*c)
+            break
